@@ -1,0 +1,54 @@
+# Конфигурация для IMAP (zoho.eu)
+imap:
+  host: "imap.zoho.eu"
+  port: 993
+  username: "your_email@zoho.eu"
+  password: "your_app_password"
+  folder: "INBOX"
+  filters:
+    days_back: 30
+  timeout: 30
+  ssl: true
+
+# Конфигурация для Excel 2021
+excel:
+  path: "data/prices.xlsx"
+  columns:
+    url: "A"
+    status: "B"
+    price: "C"
+    casino_price: "D"
+    mail: "E"
+    payment: "F"
+    date: "G"
+    geo: "H"
+    language: "I"
+    dr: "J"
+    traffic: "K"
+    backlinks: "L"
+    keywords: "M"
+    tf: "N"
+    cf: "O"
+    tf_cf: "P"
+    important_info: "Q"
+    comments: "R"
+  target_columns: ["price", "casino_price", "important_info", "comments"]
+  backup:
+    enabled: true
+    keep_days: 7
+
+# Конфигурация LM Studio (qwen3-8b)
+lm_studio:
+  host: "localhost"
+  port: 1234
+  model: "qwen3-8b"
+  version: "0.3.16"
+  timeout: 30
+  max_tokens: 2000
+  temperature: 0.7
+
+# Настройки логирования
+logging:
+  level: "INFO"
+  max_size: 1048576  # 1MB
+  backup_count: 5
